@@ -1,54 +1,80 @@
-body {background: white; vlink: gray;}
-
-p {font-family: Courier New; color: black; font-size: 1em; font-weight:200; text-align: left; margin-left: 4%; margin-right: 4%}
-h1 {font-family: Courier New; color: black; font-size: 4em; text-align: left; font-weight:200; margin-left: 12%}
-h2 {font-family: Courier New; color: black; font-size: 2em; text-align: center;font-weight:200}
-h3 {font-family: Courier New; color: black; font-size: .8em; font-weight:200; text-align: left; margin-left: 8%; margin-right: 4%}
-
-div.title {
-position:fixed;
-width: 70%;
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-div.top {
-width: 15%;
-position:fixed;
-top: 5%;
-right: 20%;
-float: right;
-text-align: right;
+/* Global styles */
+body {
+    font-family: "courier new", Courier, monospace;
+    cursor: url('finger.png'), auto;
+    color: #333333;
+    background-color: #FAFAFA;
 }
 
-div.top2 {
-width: 12%;
-position:fixed;
-top: 5%;
-right: 5%;
-text-align: right;
+p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25;
 }
 
+h1 {
+    font-size: 60px;
+    font-weight: normal;
+}
 
-div.left {
-width: 25%; 
-text-align: justify;
-position:fixed;
-left:6%;
-top: 22%; 
-border-style:solid;}
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
 
+header {
+    color: black;
+    text-align: center;
+    padding-top: 30px; /* Adjust the padding as needed */
+}
 
-div.middle {
-width: 25%; 
-text-align: justify;
-position:fixed;
-left:37%; 
-top: 22%; 
-border-style:solid;}
+main {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
 
-div.right {
-width: 25%;
-position:fixed;
-left: 68%;
-top: 22%;
-border-style:solid;}
+.container {
+    display: flex;
+    justify-content: center;
+}
 
+#portfolio {
+    max-width: 600px; /* Adjust the maximum width as desired */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0; /* Adjust the padding as needed */
+}
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px; /* Optional: Add some spacing between the image and text */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    header {
+        padding: 10px;
+    }
+
+    main {
+        margin-top: 20px; /* Adjust the margin as needed */
+    }
+
+    #portfolio {
+        padding: 10px;
+        max-width: none;
+    }
+}
