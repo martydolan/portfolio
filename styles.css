@@ -1,80 +1,93 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global styles */
 body {
-    font-family: "courier new", Courier, monospace;
-    cursor: url('finger.png'), auto;
-    color: #333333;
-    background-color: #FAFAFA;
+    font-family: monospace;
+    line-height: .9;
+    background-color: #f9f9f9;
+
 }
 
 p {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.25;
+    font-size: 1em;
 }
 
 h1 {
-    font-size: 45px;
-    font-weight: normal;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-left: 20px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 2em;
     font-weight: normal;
-}
-
-header {
-    color: black;
     text-align: center;
-    padding-top: 30px; /* Adjust the padding as needed */
+ 
 }
 
-main {
-    margin-top: 20px; /* Adjust the margin as needed */
+h3 {
+    font-size: 3em;
+    font-weight: 20;
 }
 
-.container {
+.photo-container {
+  
     display: flex;
     justify-content: center;
+    align-items: center; /* Vertically center the content */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 5px;
 }
 
-#portfolio {
-    max-width: 600px; /* Adjust the maximum width as desired */
+#randomImage {
     width: 100%;
-    margin: 0 auto;
-    padding: 20px 0; /* Adjust the padding as needed */
-}
-
-.portfolio-item {
-    display: flex;
-    align-items: center;
-}
-
-.portfolio-item img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
-    margin-right: 10px; /* Optional: Add some spacing between the image and text */
 }
 
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-    /* Adjustments for mobile devices */
-    header {
-        padding: 10px;
+/* Container for the title section */
+.title-container {
+    text-align: center; /* Center text within the body */
+    padding-top: 10px;
+}
+
+/* Container for the two main sections */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    
+	
+}
+
+.section {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* For larger screens (laptops, desktops) */
+@media only screen and (min-width: 768px) {
+    .container {
+        justify-content: center;
     }
 
-    main {
-        margin-top: 20px; /* Adjust the margin as needed */
+    .section {
+        flex: 1;
+        max-width: 30%;
+        margin: auto 5px; /* Adjust the margin value to control spacing */
     }
 
-    #portfolio {
-        padding: 20px;
-        max-width: none;
+    #randomImage {
+        max-width: 40%;
     }
+}
+
+/* For smaller screens (phones) */
+@media only screen and (max-width: 767px) {
+    #randomImage {
+        max-width: calc(150% - 40px); /* Adjust this value for smaller screens, accounting for margins */
+    }
+
+	.section {
+margin-left: 5%;
+    margin-right: 5%;
+
 }
